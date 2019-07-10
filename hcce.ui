@@ -10,8 +10,20 @@
     <x>0</x>
     <y>0</y>
     <width>706</width>
-    <height>529</height>
+    <height>636</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>706</width>
+    <height>636</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>706</width>
+    <height>1474</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>HCCE</string>
@@ -23,8 +35,8 @@
    <widget class="QTextBrowser" name="TBH">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>0</y>
+      <x>70</x>
+      <y>40</y>
       <width>581</width>
       <height>41</height>
      </rect>
@@ -45,11 +57,23 @@ p, li { white-space: pre-wrap; }
    <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>80</y>
-      <width>581</width>
+      <x>20</x>
+      <y>120</y>
+      <width>661</width>
       <height>391</height>
      </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>581</width>
+      <height>391</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>661</width>
+      <height>601</height>
+     </size>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color:rgb(170, 255, 255)</string>
@@ -1275,8 +1299,8 @@ p, li { white-space: pre-wrap; }
    <widget class="QPushButton" name="PBFrn">
     <property name="geometry">
      <rect>
-      <x>284</x>
-      <y>51</y>
+      <x>314</x>
+      <y>91</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -1291,8 +1315,8 @@ p, li { white-space: pre-wrap; }
    <widget class="QPushButton" name="PBHome">
     <property name="geometry">
      <rect>
-      <x>41</x>
-      <y>51</y>
+      <x>71</x>
+      <y>91</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -1307,8 +1331,8 @@ p, li { white-space: pre-wrap; }
    <widget class="QPushButton" name="PBStruct">
     <property name="geometry">
      <rect>
-      <x>122</x>
-      <y>51</y>
+      <x>152</x>
+      <y>91</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -1323,8 +1347,8 @@ p, li { white-space: pre-wrap; }
    <widget class="QPushButton" name="PBWall">
     <property name="geometry">
      <rect>
-      <x>203</x>
-      <y>51</y>
+      <x>233</x>
+      <y>91</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -1339,8 +1363,8 @@ p, li { white-space: pre-wrap; }
    <widget class="QPushButton" name="PBSt">
     <property name="geometry">
      <rect>
-      <x>365</x>
-      <y>51</y>
+      <x>395</x>
+      <y>91</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -1352,7 +1376,68 @@ p, li { white-space: pre-wrap; }
      <string>Storeys</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>0</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Max</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>0</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Min</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>MAX</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_4">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>0</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>MIN</string>
+    </property>
+   </widget>
   </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
@@ -1381,17 +1466,73 @@ p, li { white-space: pre-wrap; }
    <addaction name="menuEdit"/>
    <addaction name="menuHelp"/>
   </widget>
-  <widget class="QToolBar" name="mainToolBar">
-   <attribute name="toolBarArea">
-    <enum>TopToolBarArea</enum>
-   </attribute>
-   <attribute name="toolBarBreak">
-    <bool>false</bool>
-   </attribute>
-  </widget>
-  <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>HCCE</receiver>
+   <slot>showFullScreen()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>684</x>
+     <y>52</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>692</x>
+     <y>148</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>HCCE</receiver>
+   <slot>showNormal()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>586</x>
+     <y>42</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>272</x>
+     <y>38</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>stackedWidget</receiver>
+   <slot>showMaximized()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>48</x>
+     <y>47</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>79</x>
+     <y>184</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_4</sender>
+   <signal>clicked()</signal>
+   <receiver>stackedWidget</receiver>
+   <slot>showMinimized()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>117</x>
+     <y>45</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>73</x>
+     <y>195</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

@@ -1,25 +1,14 @@
 #include "variables.h"
 #include "secondstorey.h"
 #include "ui_secondstorey.h"
-double ha;                         //ha=house area
-int ft,cd;                         // ft=foundation type || dc=dimension of columns
-double fd,fa;                      //depth of foundation || area of foundation
-int sn,bt;                            //ns=no. of stories ||
-double dlo,dli;                    //lod=length of outer dpc || lid=length of inner dpc
-double costdpc;
-double ctcp,bkcp,rdcp,sncp,stcp;   //cost price of: cement per unit vol.,brick per piece,rod per kg,sand per unit volume,stone per unit kg
-double wh[3],wwo[3],wwi[3];                 //wall height ,wall width outer & inner
-int dno[3],dni[3],wno[3],wni[3];               //door no. outer & inner, windows number outer & inner
-double who[3],whi[3],wnwo[3],wnwi[3];          // windows height & width inner &outer
-double dho[3],dhi[3],dwo[3],dwi[3];            // doors height & width inner &out
-double st[3],sa[3];                      //slab thickness & area
-double ws[3];                         //width of inner staircase
-int wti[3],wto[3],bd[3];                     //window type inner/outer beam dimension
-//database variables
-double b1p,b2p,opc,ppc,snd,grav,rods,stn;
-double marble,tile,granite,al,wood,upvc;
-double brick_vol,cem_vol,sand_vol,grav_vol,rod_dens,stn_dens;
-
+//variables
+ double wh_2,wwo_2,wwi_2;                 //wall height ,wall width outer & inner
+ int dno_2,dni_2,wno_2,wni_2;               //door no. outer & inner, windows number outer & inner
+ double who_2,whi_2,wnwo_2,wnwi_2;          // windows height & width inner &outer
+ double dho_2,dhi_2,dwo_2,dwi_2;            // doors height & width inner &out
+ double st_2,sa_2;                      //slab thickness & area
+ double ws_2;                         //width of inner staircase
+ int wti_2,wto_2,bd_2;                     //window type inner/outer beam dimension
 SecondStorey::SecondStorey(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::SecondStorey)
@@ -37,97 +26,97 @@ SecondStorey::~SecondStorey()
 
 void SecondStorey::on_DSWH_valueChanged(double arg1)
 {
-    wh[1]=arg1;
+    wh_2=arg1;
 }
 
 void SecondStorey::on_DSWW_valueChanged(double arg1)
 {
-    wwo[1]=arg1;
+    wwo_2=arg1;
 }
 
 void SecondStorey::on_DSWWI_valueChanged(double arg1)
 {
-    wwi[1]=arg1;
+    wwi_2=arg1;
 }
 
 void SecondStorey::on_DSDB_currentIndexChanged(int index)
 {
-    bd[1]=index;
+    bd_2=index;
 }
 
 void SecondStorey::on_DSWIS_valueChanged(double arg1)
 {
-    ws[1]=arg1;
+    ws_2=arg1;
 }
 
 void SecondStorey::on_DSNOD_valueChanged(int arg1)
 {
-    dno[1]=arg1;
+    dno_2=arg1;
 }
 
 void SecondStorey::on_DSNOW_valueChanged(int arg1)
 {
-    wno[1]=arg1;
+    wno_2=arg1;
 }
 
 void SecondStorey::on_DSODW_valueChanged(double arg1)
 {
-    dwo[1]=arg1;
+    dwo_2=arg1;
 }
 
 void SecondStorey::on_DSODH_valueChanged(double arg1)
 {
-    dho[1]=arg1;
+    dho_2=arg1;
 }
 
 void SecondStorey::on_CBTWI_currentIndexChanged(int index)
 {
-    wto[1]=index;
+    wto_2=index;
 }
 
 void SecondStorey::on_DSOWNW_valueChanged(double arg1)
 {
-    wnwo[1]=arg1;
+    wnwo_2=arg1;
 }
 
 void SecondStorey::on_DSOWNH_valueChanged(double arg1)
 {
-    who[1]=arg1;
+    who_2=arg1;
 }
 
 void SecondStorey::on_DSNDI_valueChanged(int arg1)
 {
-    dni[1]=arg1;
+    dni_2=arg1;
 }
 
 void SecondStorey::on_DSNWI_valueChanged(int arg1)
 {
-    wni[1]=arg1;
+    wni_2=arg1;
 }
 
 void SecondStorey::on_DSIDW_valueChanged(double arg1)
 {
-    dwi[1]=arg1;
+    dwi_2=arg1;
 }
 
 void SecondStorey::on_DSIDH_valueChanged(double arg1)
 {
-    dhi[1]=arg1;
+    dhi_2=arg1;
 }
 
 void SecondStorey::on_CBTWO_activated(int index)
 {
-    wti[1]=index;
+    wti_2=index;
 }
 
 void SecondStorey::on_DSIWNW_valueChanged(double arg1)
 {
-    wnwi[1]=arg1;
+    wnwi_2=arg1;
 }
 
 void SecondStorey::on_DSIWNH_valueChanged(double arg1)
 {
-    whi[1]=arg1;
+    whi_2=arg1;
 }
 
 
