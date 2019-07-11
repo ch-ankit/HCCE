@@ -19,9 +19,9 @@
 //database variables
   double b1p,b2p,opc,ppc,snd,grav,rods,stn;
   double marble,tile,granite,al,wood,upvc;
-  double brick_vol,cem_vol,sand_vol,grav_vol,rod_dens,stn_dens;
+  double brick_vol,cem_vol,sand_vol,grav_vol,rod_dens,stn_dens,bvcs;
   double dpc();
-  double vwall();
+  double wall();
 using namespace std;
 double dpc(){
         double hdpc=0.2;
@@ -36,20 +36,18 @@ double dpc(){
 }
 
     double wall(){
-        double bvcs=0.00167;
         double vwall_1=0,vwall_2=0,vwall_3=0;
-        double vbrk=0.00157;
-        int nbrick_1=0,nbrick_2=0,nbrick_3=0;
+        int nbrick=0;
         vwall_1=(wwo_1*wh_1*dlo)+(wwi_1*wh_1*dli);
-        nbrick_1=(vwall_1/bvcs);
-        float bprice;
-        double cemvol=0.0347;
-        double ppc=410;
-        double sndvol=7.50396;
-        double brick=nbrick[0]*bprice;
-        double vcs=nbrick[0]*(bvcs-vbrk);
+        vwall_2=(wwo_2*wh_2*dlo)+(wwi_2*wh_2*dli);
+        vwall_3=(wwo_3*wh_3*dlo)+(wwi_3*wh_3*dli);
+        nbrick=(vwall_1/bvcs)+(vwall_2/bvcs)+(vwall_3/bvcs);
+        if(bt==0) double brick=nbrick*b1;
+        else      double brick=nbrick*b2;
+        double vcs=nbrick*(bvcs-brick_vol);
         double vcem=vcs/7;
         double vsnd=(6*vcs)/7;
-        double cost=brick+((vcem/cemvol)*ppc)+((vsnd/sndvol)*2251);
-        return cost;
+        double costwall=brick+((vcem/cem_vol)*ppc)+((vsnd/sand_vol)*snd);
+        return costwall;
     }
+
