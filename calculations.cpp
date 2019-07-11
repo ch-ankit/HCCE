@@ -1,6 +1,5 @@
 #include<iostream>
 #include"variables.h"
-#include"variables.h"
 //variables
   double ha;                         //ha=house area
   int ft,cd;                         // ft=foundation type || dc=dimension of columns
@@ -42,8 +41,8 @@ double dpc(){
         vwall_2=(wwo_2*wh_2*dlo)+(wwi_2*wh_2*dli);
         vwall_3=(wwo_3*wh_3*dlo)+(wwi_3*wh_3*dli);
         nbrick=(vwall_1/bvcs)+(vwall_2/bvcs)+(vwall_3/bvcs);
-        if(bt==0) double brick=nbrick*b1;
-        else      double brick=nbrick*b2;
+        if(bt==0) double brick=nbrick*b1p;
+        else      double brick=nbrick*b2p;
         double vcs=nbrick*(bvcs-brick_vol);
         double vcem=vcs/7;
         double vsnd=(6*vcs)/7;
