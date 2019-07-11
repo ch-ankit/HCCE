@@ -16,6 +16,7 @@ double dho_1=0,dhi_1=0,dwo_1=0,dwi_1=0;            // doors height & width inner
 double st_1=0,sa_1=0;                      //slab thickness & area
 double ws_1=0;                         //width of inner staircase
 int wti_1=0,wto_1=0,bd_1=0;                     //window type inner/outer beam dimension
+int sf,tf;
 
 HCCE::HCCE(QWidget *parent) :
     QMainWindow(parent),
@@ -200,6 +201,11 @@ void HCCE::on_PBSt_clicked()
     ui->stackedWidget->setCurrentIndex(4);
 }
 
+void HCCE::on_PBSt_2_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(5);
+}
+
 void HCCE::on_PB21_clicked()
 {
     SecondStorey secstorey;
@@ -213,4 +219,20 @@ void HCCE::on_PB21_2_clicked()
     thirdstorey thistorey;
     thistorey.setModal(true);
     thistorey.exec();
+}
+
+
+void HCCE::on_PB20_clicked()
+{
+    sf=1;
+}
+
+void HCCE::on_PB20_2_clicked()
+{
+    tf=1;
+}
+
+void HCCE::on_pushButton_3_clicked()
+{
+
 }

@@ -18,4 +18,5 @@ extern int wti_1,wto_1,bd_1,wti_2,wto_2,bd_2,wti_3,wto_3,bd_3;                  
 extern double b1p,b2p,opc,ppc,snd,grav,rods,stn;
 extern double marble,tile,granite,al,wood,upvc;
 extern double brick_vol,cem_vol,sand_vol,grav_vol,rod_dens,stn_dens,bvcs;
+extern int sf,tf;
 #endif // VARIABLES_H

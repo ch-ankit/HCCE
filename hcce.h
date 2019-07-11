@@ -99,6 +99,14 @@ private slots:
 
     void on_PB21_2_clicked();
 
+    void on_PBSt_2_clicked();
+
+    void on_PB20_clicked();
+
+    void on_PB20_2_clicked();
+
+    void on_pushButton_3_clicked();
+
 private:
     Ui::HCCE *ui;
 };
