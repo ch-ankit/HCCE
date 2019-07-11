@@ -1,12 +1,13 @@
 #include<iostream>
 #include"variables.h"
+#include"variables.h"
 double dpc();
 double wall();
 using namespace std;
 double dpc(){
         double hdpc=0.2;
-        double wdpc = wwo[1]+.05*wwo[1];
-        double vdpc/*volume */ =hdpc*wdpc*(dlo+dli);
+        double wdpc = wwo_1+.05*wwo_1];
+        double vdpc=hdpc*wdpc*(dlo+dli);
         double vrdpc=0.04*vdpc;
         double vcdpc=0.137*vdpc;
         double vsndpc=0.274*vdpc;
@@ -17,12 +18,12 @@ double dpc(){
 
     double wall(){
         double bvcs=0.00167;
-        double vwall[3];
-        vwall[0]=1;
+        double vwall_1=0,vwall_2=0,vwall_3=0;
         double vbrk=0.00157;
-        int nbrick[3];
-        nbrick[0]=(vwall[0]/bvcs);
-        float bprice=5.5;
+        int nbrick_1=0,nbrick_2=0,nbrick_3=0;
+        vwall_1=(wwo_1*wh_1*dlo)+(wwi_1*wh_1*dli);
+        nbrick_1=(vwall_1/bvcs);
+        float bprice;
         double cemvol=0.0347;
         double ppc=410;
         double sndvol=7.50396;
