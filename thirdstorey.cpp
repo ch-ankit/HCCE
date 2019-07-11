@@ -2,13 +2,13 @@
 #include "thirdstorey.h"
 #include "ui_thirdstorey.h"
 //variables
- double wh_3,wwo_3,wwi_3;                 //wall height ,wall width outer & inner
- int dno_3,dni_3,wno_3,wni_3;               //door no. outer & inner, windows number outer & inner
- double who_3,whi_3,wnwo_3,wnwi_3;          // windows height & width inner &outer
- double dho_3,dhi_3,dwo_3,dwi_3;            // doors height & width inner &out
- double st_3,sa_3;                      //slab thickness & area
- double ws_3;                         //width of inner staircase
- int wti_3,wto_3,bd_3;                     //window type inner/outer beam dimension
+ double wh_3=0,wwo_3=0,wwi_3=0;                 //wall height ,wall width outer & inner
+ int dno_3=0,dni_3=0,wno_3=0,wni_3=0;               //door no. outer & inner, windows number outer & inner
+ double who_3=0,whi_3=0,wnwo_3=0,wnwi_3=0;          // windows height & width inner &outer
+ double dho_3=0,dhi_3=0,dwo_3=0,dwi_3=0;            // doors height & width inner &out
+ double st_3=0,sa_3=0;                      //slab thickness & area
+ double ws_3=0;                         //width of inner staircase
+ int wti_3=0,wto_3=0,bd_3=0;                     //window type inner/outer beam dimension
 thirdstorey::thirdstorey(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::thirdstorey)

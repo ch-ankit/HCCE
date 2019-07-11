@@ -1,7 +1,14 @@
-#include<iostream>
-#include"variables.h"
+#include <iostream>
+#include "variables.h"
+#include "hcce.h"
+#include "secondstorey.h"
+#include "thirdstorey.h"
+
 //variables
-  double ha;                         //ha=house area
+double brick_vol,cem_vol,sand_vol,grav_vol,rod_dens,stn_dens,bvcs;
+double b1p,b2p,opc,ppc,snd,grav,rods,stn;
+double costdpc;
+  /*double ha;                         //ha=house area
   int ft,cd;                         // ft=foundation type || dc=dimension of columns
   double fd,fa;                      //depth of foundation || area of foundation
   int sn,bt;                            //ns=no. of stories ||brick type
@@ -18,10 +25,11 @@
 //database variables
   double b1p,b2p,opc,ppc,snd,grav,rods,stn;
   double marble,tile,granite,al,wood,upvc;
-  double brick_vol,cem_vol,sand_vol,grav_vol,rod_dens,stn_dens,bvcs;
+  double brick_vol,cem_vol,sand_vol,grav_vol,rod_dens,stn_dens,bvcs;*/
+
   double dpc();
   double wall();
-using namespace std;
+
 double dpc(){
         double hdpc=0.2;
         double wdpc = wwo_1+.05*wwo_1;
@@ -41,8 +49,9 @@ double dpc(){
         vwall_2=(wwo_2*wh_2*dlo)+(wwi_2*wh_2*dli);
         vwall_3=(wwo_3*wh_3*dlo)+(wwi_3*wh_3*dli);
         nbrick=(vwall_1/bvcs)+(vwall_2/bvcs)+(vwall_3/bvcs);
-        if(bt==0) double brick=nbrick*b1p;
-        else      double brick=nbrick*b2p;
+        double brick=0;
+        if(bt==0)  brick=nbrick*b1p;
+        else       brick=nbrick*b2p;
         double vcs=nbrick*(bvcs-brick_vol);
         double vcem=vcs/7;
         double vsnd=(6*vcs)/7;

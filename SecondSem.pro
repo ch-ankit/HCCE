@@ -25,6 +25,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+        calculations.cpp \
         main.cpp \
         hcce.cpp \
         secondstorey.cpp \

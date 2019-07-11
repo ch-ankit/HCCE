@@ -4,18 +4,18 @@
 #include "secondstorey.h"
 #include "thirdstorey.h"
 //variables
-double ha;                         //ha=house area
-int ft,cd;                         // ft=foundation type || dc=dimension of columns
-double fd,fa;                      //depth of foundation || area of foundation
-int sn,bt;                            //ns=no. of stories ||brick type
-double dlo,dli;                    //lod=length of outer dpc || lid=length of inner dpc
-double wh_1,wwo_1,wwi_1;                 //wall height ,wall width outer & inner
-int dno_1,dni_1,wno_1,wni_1;               //door no. outer & inner, windows number outer & inner
-double who_1,whi_1,wnwo_1,wnwi_1;          // windows height & width inner &outer
-double dho_1,dhi_1,dwo_1,dwi_1;            // doors height & width inner &out
-double st_1,sa_1;                      //slab thickness & area
-double ws_1;                         //width of inner staircase
-int wti_1,wto_1,bd_1;                     //window type inner/outer beam dimension
+double ha=0;                         //ha=house area
+int ft=0,cd=0;                         // ft=foundation type || dc=dimension of columns
+double fd=0,fa=0;                      //depth of foundation || area of foundation
+int sn=0,bt=0;                            //ns=no. of stories ||brick type
+double dlo=0,dli=0;                    //lod=length of outer dpc || lid=length of inner dpc
+double wh_1=0,wwo_1=0,wwi_1=0;                 //wall height ,wall width outer & inner
+int dno_1=0,dni_1=0,wno_1=0,wni_1=0;               //door no. outer & inner, windows number outer & inner
+double who_1=0,whi_1=0,wnwo_1=0,wnwi_1=0;          // windows height & width inner &outer
+double dho_1=0,dhi_1=0,dwo_1=0,dwi_1=0;            // doors height & width inner &out
+double st_1=0,sa_1=0;                      //slab thickness & area
+double ws_1=0;                         //width of inner staircase
+int wti_1=0,wto_1=0,bd_1=0;                     //window type inner/outer beam dimension
 
 HCCE::HCCE(QWidget *parent) :
     QMainWindow(parent),

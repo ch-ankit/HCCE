@@ -2,13 +2,13 @@
 #include "secondstorey.h"
 #include "ui_secondstorey.h"
 //variables
- double wh_2,wwo_2,wwi_2;                 //wall height ,wall width outer & inner
- int dno_2,dni_2,wno_2,wni_2;               //door no. outer & inner, windows number outer & inner
- double who_2,whi_2,wnwo_2,wnwi_2;          // windows height & width inner &outer
- double dho_2,dhi_2,dwo_2,dwi_2;            // doors height & width inner &out
- double st_2,sa_2;                      //slab thickness & area
- double ws_2;                         //width of inner staircase
- int wti_2,wto_2,bd_2;                     //window type inner/outer beam dimension
+ double wh_2=0,wwo_2=0,wwi_2=0;                 //wall height ,wall width outer & inner
+ int dno_2=0,dni_2=0,wno_2=0,wni_2=0;               //door no. outer & inner, windows number outer & inner
+ double who_2=0,whi_2=0,wnwo_2=0,wnwi_2=0;          // windows height & width inner &outer
+ double dho_2=0,dhi_2=0,dwo_2=0,dwi_2=0;            // doors height & width inner &out
+ double st_2=0,sa_2=0;                      //slab thickness & area
+ double ws_2=0;                         //width of inner staircase
+ int wti_2=0,wto_2=0,bd_2=0;                     //window type inner/outer beam dimension
 SecondStorey::SecondStorey(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::SecondStorey)
